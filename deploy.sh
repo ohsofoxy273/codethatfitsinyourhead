@@ -20,7 +20,7 @@ if [[ $INVALID_PLAYWRIGHT != "failed" && $VALID_LINT == "All matched files use P
     echo "typescript: $VALID_TYPESCRIPT"
     git add .
     git commit -m "$1"
-    git push origin master
+    git push origin main
     echo 'Successfully pushed to github'
 else
     echo 'FAILED'
