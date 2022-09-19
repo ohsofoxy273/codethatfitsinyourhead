@@ -1,1 +1,6 @@
-<p>Hello, World!</p>
+<script>
+	/** @type {import('./$types').PageData} */
+	export let data;
+</script>
+
+<p>{data.message}</p>

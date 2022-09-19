@@ -1,5 +1,8 @@
 #!/bin/bash
 
+npm run format
+npm run lint
+
 echo "TESTING"
 INVALID_PLAYWRIGHT="$(npm run test:playwright | grep -o 'failed')" 
 
