@@ -1,11 +1,11 @@
 type IReservation = {
-	date: string;
+	date: Date;
 	email: string;
 	name: string;
 	quantity: number;
 };
 
-export async function postReservation(baseURL: string | undefined, reservation: IReservation) {
+export async function postReservationAPI(baseURL: string | undefined, reservation: IReservation) {
 	return await fetch(`${baseURL}/api/reservations`, {
 		method: 'POST',
 		headers: {
@@ -13,4 +13,20 @@ export async function postReservation(baseURL: string | undefined, reservation: 
 		},
 		body: JSON.stringify(reservation)
 	});
+}
+
+const fakeDb = () => {
+	const reservations: IReservation[] = [
+		{
+			date: new Date('2023-03-10 19:00'),
+			email: 'katinka@example.com',
+			name: 'Katinka Ingabogovinanana',
+			quantity: 2
+		}
+	];
+	return reservations;
+};
+
+export function postReservation() {
+	return fakeDb();
 }
