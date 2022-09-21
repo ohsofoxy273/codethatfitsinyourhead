@@ -1,0 +1,1 @@
+knex migrate:make --knexfile knexfile.cjs  "$1"

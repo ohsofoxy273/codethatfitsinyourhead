@@ -1,0 +1,1 @@
+DATABASE_URL=postgres://postgres@localhost/reservations knex migrate:latest --knexfile knexfile.cjs

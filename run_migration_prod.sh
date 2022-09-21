@@ -1,0 +1,1 @@
+knex migrate:latest --knexfile knexfile.cjs
