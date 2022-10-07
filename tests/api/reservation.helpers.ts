@@ -1,9 +1,4 @@
-type IReservation = {
-	date: Date;
-	email: string;
-	name: string;
-	quantity: number;
-};
+import type {IReservation} from '../../interfaceTypes';
 
 export async function postReservationAPI(baseURL: string | undefined, reservation: IReservation) {
 	return await fetch(`${baseURL}/api/reservations`, {
